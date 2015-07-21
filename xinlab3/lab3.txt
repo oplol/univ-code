@@ -1,0 +1,98 @@
+1314 is a duplicate, which will NOT be inserted. 
+7222 is a duplicate, which will NOT be inserted. 
+9901 is a duplicate, which will NOT be inserted. 
+
+1. The doubly linked list with forward order using the print function is: 
+1314  1810  1984  2002  2735  2818  3938  4477  4567  5343  5876  6248  7222  7450  7564  7661  8398  8715  9040  9901  
+
+2. The doubly linked list with reverse order using the reversePrint function is: 
+9901  9040  8715  8398  7661  7564  7450  7222  6248  5876  5343  4567  4477  3938  2818  2735  2002  1984  1810  1314  
+
+3. The doubly linked list with forward order using the getItemForward function is: 
+  1. 1314
+  2. 1810
+  3. 1984
+  4. 2002
+  5. 2735
+  6. 2818
+  7. 3938
+  8. 4477
+  9. 4567
+ 10. 5343
+ 11. 5876
+ 12. 6248
+ 13. 7222
+ 14. 7450
+ 15. 7564
+ 16. 7661
+ 17. 8398
+ 18. 8715
+ 19. 9040
+ 20. 9901
+
+4. The doubly linked list with reverse order using the getItemReverse function is: 
+  1. 9901
+  2. 9040
+  3. 8715
+  4. 8398
+  5. 7661
+  6. 7564
+  7. 7450
+  8. 7222
+  9. 6248
+ 10. 5876
+ 11. 5343
+ 12. 4567
+ 13. 4477
+ 14. 3938
+ 15. 2818
+ 16. 2735
+ 17. 2002
+ 18. 1984
+ 19. 1810
+ 20. 1314
+
+5. The copied doubly linked list with forward order using the getItemForward function is: 
+  1. 1314
+  2. 1810
+  3. 1984
+  4. 2002
+  5. 2735
+  6. 2818
+  7. 3938
+  8. 4477
+  9. 4567
+ 10. 5343
+ 11. 5876
+ 12. 6248
+ 13. 7222
+ 14. 7450
+ 15. 7564
+ 16. 7661
+ 17. 8398
+ 18. 8715
+ 19. 9040
+ 20. 9901
+
+6. The copied doubly linked list with reverse order using the getItemReverse function is: 
+  1. 9901
+  2. 9040
+  3. 8715
+  4. 8398
+  5. 7661
+  6. 7564
+  7. 7450
+  8. 7222
+  9. 6248
+ 10. 5876
+ 11. 5343
+ 12. 4567
+ 13. 4477
+ 14. 3938
+ 15. 2818
+ 16. 2735
+ 17. 2002
+ 18. 1984
+ 19. 1810
+ 20. 1314
+

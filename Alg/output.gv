@@ -1,0 +1,11 @@
+graph G
+{
+	e -- f [label="1"];
+	g -- h [label="1"];
+	d -- f [label="1"];
+	h -- b [label="1"];
+	i -- c [label="2"];
+	g -- f [label="2"];
+	c -- f [label="4"];
+	b -- a [label="4"];
+}

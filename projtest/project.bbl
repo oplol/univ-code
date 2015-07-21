@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{Jon90}
+{\sc Jones, J.}
+\newblock Title of journal article.
+\newblock {\em Title of Journal 76\/} (July 1990), 27--45.
+
+\bibitem{Smi88}
+{\sc Smith, J.}
+\newblock Title of report.
+\newblock Research Report~23, Department of Publication, Name of University,
+  City, State, October 1988.
+
+\bibitem{Smi83}
+{\sc Smith, J., and Jones, J.}
+\newblock {\em A Smith and Jones Book}, 16th~ed., vol.~1.
+\newblock Name of Publishing Company, City, State of Publication, 1983.
+
+\end{thebibliography}

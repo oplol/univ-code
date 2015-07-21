@@ -1,0 +1,25 @@
+             OUTPUT FOR XINYI WANG LAB11	SPRING 2011
+
+1. Displaying the tree1
+   1) The three traversals:
+       Inorder traversal:
+        150 165 182 222 228 229 250 341 350 620 646 735 741 842 943 
+       Preorder traversal:
+        735 341 229 222 165 150 182 228 250 646 620 350 842 741 943 
+       Postorder traversal:
+        150 182 165 228 222 250 229 350 620 646 341 741 943 842 735 
+   2) The height of the tree: 6
+   3) The number of nodes in the tree: 15
+   4) The number of leaves in the tree: 7
+
+2. Displaying the tree2
+   1) The three traversals:
+       Inorder traversal:
+        150 165 182 222 228 229 250 341 350 620 646 735 741 842 943 
+       Preorder traversal:
+        228 150 165 222 182 229 842 350 341 250 735 646 620 741 943 
+       Postorder traversal:
+        182 222 165 150 250 341 620 646 741 735 350 943 842 229 228 
+   2) The height of the tree: 7
+   3) The number of nodes in the tree: 15
+   4) The number of leaves in the tree: 5

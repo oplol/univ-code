@@ -1,0 +1,31 @@
+graph G
+{
+	a -- b [label="4"];
+	b -- a [label="4"];
+	b -- c [label="8"];
+	c -- b [label="8"];
+	c -- d [label="7"];
+	d -- c [label="7"];
+	d -- e [label="9"];
+	e -- d [label="9"];
+	e -- f [label="1"];
+	f -- e [label="1"];
+	f -- g [label="2"];
+	g -- f [label="2"];
+	g -- h [label="1"];
+	h -- g [label="1"];
+	h -- a [label="8"];
+	a -- h [label="8"];
+	b -- h [label="1"];
+	h -- b [label="1"];
+	c -- i [label="2"];
+	i -- c [label="2"];
+	c -- f [label="4"];
+	f -- c [label="4"];
+	d -- f [label="1"];
+	f -- d [label="1"];
+	g -- i [label="6"];
+	i -- g [label="6"];
+	h -- i [label="7"];
+	i -- h [label="7"];
+}

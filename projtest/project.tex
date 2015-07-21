@@ -1,0 +1,347 @@
+%% Example TAMUCC MS Project
+\documentclass{COSCMSproject}
+
+%\usepackage[dvips]{graphicx,color}
+%\usepackage[dvips]{graphicx,color}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{float} 
+\graphicspath{{image/}}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%%%%%%%%%%%
+% Type of document.
+% Use the appropriate type.
+
+\renewcommand{\type}{Project}   % Define this if proposal
+
+\begin{document}
+\pagenumbering{roman}
+
+%%  Fill in the following information between the brackets
+\newcommand{\thesistitle}{A Very Cool Project} %use \\Second Line of Title if needed
+\newcommand{\authorsname}{Scott A. King}  % Author's Full Name	
+\newcommand{\thesismonth}{Summer 2013}     % {Semester Year}
+\newcommand{\committeechair}{Dr. Richard Parent}
+\newcommand{\committeemembera}{Dr. Ahmed Mahdy}
+\newcommand{\committeememberb}{Dr. Scott A. King}
+
+% This will create the title and approval page, do not remove
+%\maketitlepage
+\approval
+
+
+% the following parts of the project can go here in one big file or can
+% be broken up into smaller files and included using the \include 
+% for example have a file called ack.tex and use \include{ack}
+% and another file called ch1.tex and use \include{ch1}
+% Just like in software development breaking into smaller files has many
+% advantages, however, you end up with a lot of extra files in your directory
+% after latex and bibtex do their jobs.
+
+\chapter{Introduction}
+
+%references
+\newpage
+\begin{thebibliography}{100}
+\bibitem{1} Bartlett, M., Hager, J., Ekman, P., and Sejnowski, T. Measuring facial         expressions by computer image analysis. \emph{Psychophysiology}(1999), vol.36, 253-263.
+\bibitem{2} Castrillon, M., Deniz, O., Hernandez, D., and Lorenzo, J. A comparison of face and facial feature detectors based on the Viola-Jones general object detection framework. \emph{Machine Vision and Applications}(2011), 481-494.
+\bibitem{3} Cohn, T.F., Cooper D., Talyor C.J., and Graham J. Active Shape Models - Their Training and Application. \emph{Computer Vision and Image Understanding}(1995), vol.61, No.1, 38-59.
+\bibitem{4} Cootes, T., Edwards, G., and Taylor, C. \emph{Active appearance models}, ECCV, 2, 1998.
+\bibitem{5} Farajzadeh, N., Faez, K., and Pan, G. Study on the performance of moments as invariant descriptors for practical face recognition systems. \emph{ IET Computer Vision}(2010), vol.4, 272-285.
+\bibitem{6} Pulli, K., Baksheev, A., Kornyakov, K., and Eruhimov, V. Real-time computer vision with OpenCV. \emph{Communications of the ACM}(2012), vol.55, 61-69.
+\bibitem{7} Zaidel, D., and Hessamian, M. Asymmetry and Symmetry in the Beauty of Human Faces. \emph{Symmetry}(2010), vol.2, 136-149.
+\bibitem{8} Huang, D., Shan, C., Ardabilian, M., Wang, Y., and Chen, L. Local Binary Patterns and Its Application to Facial Image Analysis: A Survey. \emph{IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS}(2011), vol.41, No.6, 765-781.
+\end{thebibliography}
+
+
+
+
+This section introduces the project and presents any background necessary to understand the later sections of the document.  It should identify the reasons for the project and summarize the contents of the remaining sections of the technical report.
+\section{First section}
+This section is going to be wonderful.
+\subsection{Prior Work}
+At some point you need to discuss a literature review of prior work.  This could
+be in the introduction or in a separate chapter.
+\subsubsection{Cool Results}
+Some sections will have sub sections.
+\subsubsubsection{The Most Cool Results}
+Sometimes even further sectioning is required.
+\subsubsection{Notcool Results}
+Mutliple subsections are sometimes required.
+\subsection{Problem Description}
+Mutliple subsections are sometimes required.
+\subsection{Problem Importance}
+Mutliple subsections are sometimes required.
+
+\begin{figure}
+\centering
+%\includgraphics{foo.eps}   % maybe include a graphic
+\setlength{\unitlength}{.5mm}
+\begin{picture}(130,60)
+\put(0,10){\line(1,0){140}}
+\put(10,0){\line(0,1){60}}
+\qbezier(0,0)(30,0)(120,60)
+\put(60,10){\circle*{1.5}}
+\put(60,3){$x$}
+\put(100,10){\circle*{1.5}}
+\put(100,3){$y$}
+\put(60,10){\line(0,1){13}}
+\put(10,23){\line(1,0){50}}
+\put(10,23){\circle*{1.5}}
+\put(-8,23){$F(x)$}
+\put(100,10){\line(0,1){37}}
+\put(10,47){\line(1,0){90}}
+\put(10,47){\circle*{1.5}}
+\put(-8,47){$F(y)$}
+\end{picture}
+\caption{
+\label{figex1}  % use this to reference in text.
+This is a figure.
+}
+\end{figure}
+
+\begin{figure}
+\begin{tabular}{cc}
+{
+\setlength{\unitlength}{2mm}
+\begin{picture}(30, 20)
+  \linethickness{0.075mm}
+  \multiput(0, 0)(1, 0){31}{\line(0, 1){20}}
+  \multiput(0, 0)(0, 1){21}{\line(1, 0){30}}
+  \linethickness{0.15mm}
+  \multiput(0, 0)(5, 0){7}{\line(0, 1){20}}
+  \multiput(0, 0)(0, 5){5}{\line(1, 0){30}}
+  \linethickness{0.3mm}
+  \multiput(5, 0)(10, 0){3}{\line(0, 1){20}}
+  \multiput(0, 5)(0, 10){2}{\line(1, 0){30}}  
+\end{picture}
+} &
+{
+\setlength{\unitlength}{1cm}
+\begin{picture}(6, 4)
+  \linethickness{0.075mm}
+  \multiput(0, 0)(1, 0){7}{\line(0, 1){4}}
+  \multiput(0, 0)(0, 1){5}{\line(1, 0){6}}
+  \thicklines
+  \put(0, 0){\line(6, 1){6}}
+  \put(6, 1){\line(-4, 3){4}}
+  \put(2, 4){\line(-1, -2){2}}
+  % arc
+  % P1=(2.0/4.0) P2=(0.0/0.0) P3=(6.0/1.0) 
+  % r=1.2
+  \qbezier(0.5367, 1.0733)(1.0832, 0.8)
+          (1.1837, 0.1973)
+  % arc
+  % P1=(0.0/0.0) P2=(6.0/1.0) P3=(2.0/4.0) 
+  % r=1.2
+  \qbezier(4.8163, 0.8027)(4.7319, 1.3092)
+          (5.04, 1.72)
+  % arc
+  % P1=(6.0/1.0) P2=(2.0/4.0) P3=(0.0/0.0) 
+  % r=1.2
+  \qbezier(2.96, 3.28)(2.3591, 2.4788)
+          (1.4633, 2.9267) 
+  \put(0, 0){\line(3, 2){3}} 
+  \put(3, 2){\line(3, -1){3}}
+  % arc
+  % P1=(0.0/0.0) P2=(3.0/2.0) P3=(3.0/0.0) 
+  % r=0.8
+  \qbezier(2.3344, 1.5562)(2.5719, 1.2)
+          (3.0, 1.2) 
+  % arc
+  % P1=(3.0/0.0) P2=(3.0/2.0) P3=(6.0/1.0) 
+  % r=0.8
+  \qbezier(3.0, 1.2)(3.5766, 1.2)
+          (3.7589, 1.747) 
+\end{picture}
+} \\
+a) & b) \\
+{
+\setlength{\unitlength}{1cm}
+\begin{picture}(6, 8)
+  \multiput(0, 0)(6, 0){2}{\line(0, 1){8}}
+  \multiput(0, 0)(0, 8){2}{\line(1, 0){6}}
+  \linethickness{.075mm}
+  \put(0.5, 3){\line(1, 0){2}}
+  \put(3, 2){\line(2, 1){2}}
+  \put(5.5, 0.5){\line(0, 1){3}}
+  \put(1, 1){\circle{1.3}}
+  \qbezier(1, 0.1)(4.5, 1)(2, 2.5)
+  \put(4.3, 1.3){\oval(1.6, 1.9)}
+  \linethickness{1mm}
+  \put(0.5, 7){\line(1, 0){2}}
+  \put(3, 6){\line(2, 1){2}}
+  \put(5.5, 4.5){\line(0, 1){3}}
+  \put(1, 5){\circle{1.3}}
+  \qbezier(1, 4.1)(4.5, 5)(2, 6.5)
+  \put(4.3, 5.3){\oval(1.6, 1.9)}
+\end{picture}
+} &
+{
+\setlength{\unitlength}{.5mm}
+\begin{picture}(120, 168)
+\newsavebox{\foldera}%           declaration
+\savebox{\foldera}(40, 32)[l]{%  definition
+  \multiput(0, 0)(0, 28){2}{\line(1, 0){40}}
+  \multiput(0, 0)(40, 0){2}{\line(0, 1){28}}
+  \put(1, 28){\oval(2, 2)[tl]}
+  \put(1, 29){\line(1, 0){5}}
+  \put(9, 29){\oval(6, 6)[tl]}  
+  \put(9, 32){\line(1, 0){8}}
+  \put(17, 29){\oval(6, 6)[tr]}
+  \put(20, 29){\line(1, 0){19}}
+  \put(39, 28){\oval(2, 2)[tr]}
+}
+\newsavebox{\folderb}%           declaration      
+\savebox{\folderb}(40, 32)[l]{%  definition
+  \put(0, 14){\line(1, 0){8}}
+  \put(8, 0){\usebox{\foldera}}
+}
+\multiput(0, 0)(120, 0){2}{\line(0, 1){168}}
+\multiput(0, 0)(0, 168){2}{\line(1, 0){120}}
+\put(34, 26){\line(0, 1){102}}
+\put(14, 128){\usebox{\foldera}}
+\multiput(34, 86)(0, -37){3}{\usebox{\folderb}}
+\end{picture}
+}\\
+c) & d) \\
+\end{tabular}
+\caption[Example Complex Figure]{
+\label{complexfig}  % use this to reference in text.
+This is a complex figure that has four panels.  a) is an example of foo, and b) is an
+example of bar. c) and d) are there for completeness. Actually, these are all 
+examples of the picture environment.  You would most likely do your figures
+in some package and include them as either a jpg or eps file, depending upon
+which graphics package you are using.
+}
+\end{figure}
+
+
+Figure~\ref{figex1} is an example figure, and Figure~\ref{complexfig} shows a more complex figure with mulitple panels.
+
+\begin{table}
+\caption{ \label{listofbones} A few bones that comprise the skull.}
+\begin{tabular}{lp{4.5in}}
+{\bf Name}&{\bf Description}\\
+Ethmoid& Forms part of the cranial base and part of
+    the skeleton surrounding the nasal cavities.\\
+Frontal& Forms the anterior portion of the cranium and the vaults
+  of the orbital cavities.\\
+\end{tabular}
+\end{table}
+
+Table~\ref{listofbones} is an example table. 
+
+
+Smith and Jones \cite{Smi83} is the best place to read about this topic.
+Jones \cite{Jon90} is a wonderful source of information as is Smith \cite{Smi88}.
+
+\chapter{Project codename X}
+The narrative section should be titled with the name of the system, research, or project.  This section presents a description of the project results as they appear to the project's intended audience.  It focuses on the "external" aspects of the project results such as user manuals and user interfaces, and leaves the description of the internal project details to the system design section below.
+
+% Let's just add some fake meat to the example
+\section{A Section}\newpage blank\newpage blank\newpage 
+\section{Another Section}\newpage blank\newpage
+\subsection{A Section with Some Detail}\newpage blank\newpage 
+
+\chapter{System Design or Research}
+The system design (or research) section provides a detail description of the "internal" view of the completed system or research.  The purpose of this section is to document the analysis, design, and implementation phases of the project so that the reader can fully understand how the project's results were realized.  The section should also fully document the major components of the project and its products, including things such as:
+
+\begin{itemize}
+\item systems used in the conduct of the project (equipment, languages, software packages, etc.),
+\item systems required for proper operation of systems produced by the project,
+\item database tables and schemas,
+\item entity-relationship diagrams,
+\item input, processing, and output of key programs and functions,
+\item protocols and interfaces between components,
+\item file formats, and
+\item data dictionaries.
+\end{itemize}
+
+\begin{enumerate}
+\item john
+\item fred
+\end{enumerate}
+
+Students are encouraged to make good use of structure charts, data flow diagrams, data dictionaries, and other system documentation tools to explain the details of the project.
+
+%Non research
+\section{Module foo.C}\newpage
+\section{Module bar.C}\newpage blank\newpage
+\section{Module bang.C}\newpage blank\newpage
+\section{Module init.C}\newpage blank\newpage
+
+%Research
+\section{System Overview}
+A high-level description of the system
+\section{Part A of the System}
+\newpage
+\section{Part B of the System}
+This is a simple system part.
+\section{Part C of the System}
+This one is complex.
+
+
+\chapter{Evaluation and Results}
+This section describes the results of any evaluation or testing that was performed as part of the project.  At minimum this section should describe the results of any testing or evaluation steps identified in the project proposal.  This section should also identify any ways in which the project results differ from what was proposed, along with justifications or explanations for the differences.
+
+% Let's just add some fake meat to the example
+\section{A Section}\newpage blank\newpage blank\newpage 
+\section{Another Section}\newpage blank\newpage
+\subsection{A Section with Some Detail}\newpage blank\newpage 
+
+\chapter{Future Work}
+This section identifies additional work or opportunities that exist as a result of the completion of the project.  The purpose of this section is to identify the logical "next steps" for the continuation of the project.
+
+% Let's just add some fake meat to the example
+\section{A Section}\newpage blank\newpage blank\newpage 
+\section{Another Section}\newpage blank\newpage
+\subsection{A Section with Some Detail}\newpage blank\newpage 
+
+\chapter{Conclusion}
+This section should briefly summarize the outcomes of the project.  The committee should be able to read this section to obtain a summary of the important items described in greater detail in the other sections of the document:  why this project is important, what it has accomplished, how it accomplished it, and where to go next.
+
+
+\section{Level 1 What is left to do}
+\subsection{Level 2 Coding}
+\subsubsection{Level 3 Coding}
+\subsubsubsection{Level 4 Coding}
+\subsection{Report - Another Level 2 section}
+
+\acknow{Place your acknowledgments within these braces if you have any.}
+%\bibliographystyle{theunsrt}
+\bibliographystyle{acm}
+%\bibliographystyle{alpha}
+\newpage
+\bibliography{bibdata}
+%\include{supp}
+%\include{append}
+%\include{vita}
+
+\appendix{User Study}
+I did a user study and found that my users actually used the software.
+
+
+\appendix{Code for the project}
+The following is the most awesomest code ever written for a superb project. I am proud to report it only took me two minutes to write this wonderful code.
+\singlespace{
+\begin{verbatim}
+#include <stdio>
+#include <stdlib>
+
+int main(int argc, char **argv) {
+  int i;
+
+  if (i == 42) then
+      return 0;
+  else
+      return 1;
+}
+\end{verbatim}
+}
+\end{document}
+
