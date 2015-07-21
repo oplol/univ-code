@@ -1,0 +1,106 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <mpi.h>
+
+int main(int argc, char *argv[])
+{
+	int rank, nprocs;
+	int i, token1, token2, tag1 = 11, tag2 = 22, rounds, flag1 = 0, flag2 = 0, flag_p1 = 0, flag_p2 = 0;
+	int left, right;
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+	
+	MPI_Status status1[2], status2[2];
+	MPI_Request reqs1, reqs2;
+	
+	if ((rounds = atoi(argv[1])) <= 0) {
+			if (rank == 0)
+				fprintf(stderr, "invalid rounds: %s\n", argv[1]);
+			MPI_Finalize();
+			return 0;
+        }
+	
+	token1 = 0;
+	token2 = nprocs * rounds;
+
+    right = (rank + 1) % nprocs;
+    left = (nprocs + rank - 1) % nprocs;
+	
+    /* Process with rank 0 sends the first token */
+    if (rank == 0)
+	{
+		MPI_Isend(&token1, 1, MPI_INT, right, tag1, MPI_COMM_WORLD, &reqs1);//MPI_Wait(&reqs1,status1);
+		MPI_Isend(&token2, 1, MPI_INT, left, tag2, MPI_COMM_WORLD, &reqs2);//MPI_Wait(&reqs2,status2);
+	}
+
+	for (i= 0; i < rounds; i++)
+	{
+		if (status1->MPI_SOURCE == left) {
+		MPI_Irecv(&token1, 1, MPI_INT, left, tag1, MPI_COMM_WORLD, &reqs1);
+		// MPI_Test(&reqs1, &flag1, status1);
+		// while (flag1 == 0) {
+			// MPI_Test(&reqs1, &flag1, status1);
+		// }
+		MPI_Wait(&reqs1,status1);
+		printf("Rank %3d: received token1 %2d from rank %3d. (clock-wise)\n", rank, token1, left);
+		token1 = token1 + 1;
+		}
+		
+		if (status2->MPI_SOURCE == right) {
+		MPI_Irecv(&token2, 1, MPI_INT, right, tag2, MPI_COMM_WORLD, &reqs2);
+		// MPI_Test(&reqs2, &flag2, status2);
+		// while (flag2 == 0) {
+			// MPI_Test(&reqs2, &flag2, status2);
+		// }
+		MPI_Wait(&reqs2,status2);
+		printf("Rank %3d: received token2 %2d from rank %3d. (counter clock-wise)\n", rank, token2, right);
+		token2 = token2 - 1;
+		}
+		
+		
+		
+		
+		// while (!flag1 && !flag2) {
+			// MPI_Test(&reqs1, &flag1, status1);
+			// MPI_Test(&reqs2, &flag2, status2);
+		// }
+		
+		// while(!flag2)
+		// {
+			// //MPI_Irecv(&token2, 1, MPI_INT, right, tag2, MPI_COMM_WORLD, &reqs2);
+			// MPI_Test(&reqs2, &flag2, status2);
+		// }
+		
+		//printf("MPI source 1: %3d.  source 2: %3d.  flag: %3d and %3d. tag: %3d and %3d.\n", status1->MPI_SOURCE, status2->MPI_SOURCE, flag1, flag2, status1->MPI_TAG, status2->MPI_TAG);
+		
+		
+		sleep(1); /* To see the output printed one by one simulating message passing */
+		
+		if (((rank != 0) || (i < (rounds - 1)))  /* && flag1 && status1->MPI_SOURCE == right */ )
+		{
+			
+			/* Only send it on if we are not rank 0, or there are more rounds to go */
+			MPI_Isend(&token1, 1, MPI_INT, right, tag1, MPI_COMM_WORLD, &reqs1);//MPI_Wait(&reqs1,status1);
+			// while(!flag_p1) {
+				// MPI_Iprobe(rank, tag1, MPI_COMM_WORLD, &flag_p1, status1);
+			// }
+		}
+		
+		if (((rank != 0) || (i < (rounds - 1)))  /* && flag2 && status2->MPI_SOURCE == left */ )
+		{
+			
+			/* Only send it on if we are not rank 0, or there are more rounds to go */
+			MPI_Isend(&token2, 1, MPI_INT, left, tag2, MPI_COMM_WORLD, &reqs2);//MPI_Wait(&reqs2,status2);
+			// while(!flag_p2) {
+				// MPI_Iprobe(rank, tag2, MPI_COMM_WORLD, &flag_p2, status2);
+			// }
+		}
+		
+	}
+	
+	MPI_Finalize();
+	return 0;
+}
+

@@ -1,0 +1,36 @@
+Last login: Mon Dec  5 11:31:19 on ttys004
+XsMBP:~ hsini4ever$ ssh xwang@penguin.tamucc.edu
+xwang@penguin.tamucc.edu's password: 
+Last login: Mon Dec  5 14:13:31 2011 from 192.168.200.195
+[xwang@penguin ~]$ cd COSC5377
+[xwang@penguin COSC5377]$ ls
+5377  hw2  hw3_2  hw4  hw5  hw6
+[xwang@penguin COSC5377]$ cd hw6
+[xwang@penguin hw6]$ ls
+client  server
+[xwang@penguin hw6]$ cd server
+[xwang@penguin server]$ ls
+cli_copy.dat  serv  serv1.c  serv.c  serv.dat  server.key  server.pem
+[xwang@penguin server]$ ls -l
+total 56
+-rw-r--r-- 1 xwang users  8192 Dec  5 10:55 cli_copy.dat
+-rwxr-xr-x 1 xwang users  9870 Dec  5 10:51 serv
+-rw-r--r-- 1 xwang users  4808 Dec  1 21:31 serv1.c
+-rw-r--r-- 1 xwang users  5419 Dec  5 10:51 serv.c
+-rw-r--r-- 1 xwang users 11095 Nov 23 11:44 serv.dat
+-rw-r--r-- 1 xwang users   891 Oct  8 15:14 server.key
+-rw-r--r-- 1 xwang users   863 Oct  8 15:17 server.pem
+[xwang@penguin server]$ gcc -o serv serv.c -lcrypto -lssl
+[xwang@penguin server]$ ./serv
+
+In server. Connection from 100007f, port 6a99
+In server. SSL connection using DES-CBC3-MD5
+
+[xwang@penguin server]$ ls -l
+total 52
+-rw-r--r-- 1 xwang users  4096 Dec  5 14:22 cli_copy.dat
+-rwxr-xr-x 1 xwang users  9902 Dec  5 14:22 serv
+-rw-r--r-- 1 xwang users  4808 Dec  1 21:31 serv1.c
+-rw-r--r-- 1 xwang users  5281 Dec  5 14:23 serv.c
+-rw-r--r-- 1 xwang users 11095 Nov 23 11:44 serv.dat
+

@@ -1,0 +1,28 @@
+     OUTPUT FOR Xinyi Wang XWLAB8 PROGRAM	Spring 2011
+
+     KEY  |    MESSAGE
+    5876  |  INSERT Successful
+    1314  |  INSERT Successful
+    5343  |  INSERT Successful
+    2735  |  INSERT Successful
+    7222  |  INSERT Successful
+    6248  |  INSERT Successful
+    9901  |  INSERT Successful
+
+1. The original list: 1314 2735 5343 5876 6248 7222 9901 
+   The number of elements in the original list: 7
+
+
+2. The audit trail with update code, key, and audit message: 
+   CODE  |  KEY  |    MESSAGE
+    0    |  5876 |  DELETE Successful
+    1    |  5343 |  INSERT Failed (DUPLICATE key)
+    0    |  7451 |  DELETE Failed (NOT in list)
+    1    |  1000 |  INSERT Successful
+    1    |  1984 |  INSERT Successful
+
+
+3. The updated list: 1000 1314 1984 2735 5343 6248 7222 9901 
+   The number of elements in the uplist: 8
+
+

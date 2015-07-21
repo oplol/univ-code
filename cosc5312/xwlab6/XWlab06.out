@@ -1,0 +1,224 @@
+    OUTPUT FOR Xinyi Wang XWLab06 PROGRAM	Spring 2011
+
+
+1. The Bubble Sort
+                         the unsorted list
+ |  employee id number |    employee name    |         city        |
+ |                     |                     |                     |
+ |         735         |     Ann J. Weeks    |   Corpus Christi   |
+ |         341         |     Tom Wonder      |           Denver   |
+ |         646         |     Mat Gonzales    |         Ft Worth   |
+ |         229         |     Art Smith       |     Mustang Mott   |
+ |         842         |     Ed Moreno       |          Durango   |
+ |         620         |     I.M. Blimpee    |         Beeville   |
+ |         741         |     Ed White        |        Red River   |
+ |         222         |     May Thomas      |         Ft Worth   |
+ |         165         |     Joe Bell        |           Newark   |
+ |         182         |     Alice Beach     |         San Jose   |
+ |         943         |     Tom Thumb       |           Dallas   |
+ |         150         |     Nan Newman      |         Victoria   |
+ |         250         |     Dan Duran       |        Corsicana   |
+ |         350         |     Michael Nyu     |        Las Vegas   |
+ |         228         |     Al DeLeon       |      Brownsville   |
+ |         344         |     Ted Tildon      |            Miami   |
+ |         828         |     M. J. Barns     |        Cleveland   |
+ |         110         |     Dick Reyes      |         New York   |
+ |         987         |     Ralph Dietz     |            Cuero   |
+ |         777         |     Ann Hatter      |      Big Springs   |
+ |         191         |     M. K. Moore     |          Atlanta   |
+ |         545         |     Mack Foyt       |          Daytona   |
+ |         878         |     Kim Mills       |           Austin   |
+ |         900         |     Roy Shaw        |         Paradise   |
+ |         351         |     Herb Rilley     |    San Francisco   |
+ |         291         |     Ann Woorley     |          Seattle   |
+ |         854         |     T. N. Teal      |        Baltimore   |
+ |         404         |     Sean New        |          Lubbock   |
+ |         607         |     Tom Russell     |   Salt Lake City   |
+ |         305         |     Bill Black      |          Jackson   |
+ |         199         |     Sue Shuman      |          Chicago   |
+ |         395         |     Nan Newman      |    Bullhead City   |
+ |         809         |     Avis Hall       |           Helena   |
+ |         504         |     Tammera Tool    |       South Bend   |
+ |         841         |     Nancy Gomez     |            Miami   |
+ |         149         |     Mel Dale        |          Oshkosh   |
+ |         492         |     Nell Morgan     |          Atlanta   |
+ |         613         |     Dan Morales     |          Jackson   |
+ |         386         |     Sue Bush        |       Evansville   |
+ |         929         |     Keith Aaron     |       LayFayette   |
+ |         481         |     Tom Herron      |           Denver   |
+ |         853         |     Paul Driver     |          Chicago   |
+ |         729         |     Gayle Turner    |         San Jose   |
+ |         205         |     A.D. Daniel     |         Beeville   |
+ |         482         |     Irma Perez      |        Charlotte   |
+ |         774         |     Don Guzmann     |    New Braunfels   |
+ |         338         |     Mac Deaver      |            Plano   |
+ |         194         |     Hope Allen      |       Carbondale   |
+ |         743         |     Raul Pena       |        Cleveland   |
+ |         108         |     Merri Clark     |        Sugarland   |
+
+                   the list by using the bubble sort
+ |  employee id number |    employee name    |         city        |
+ |                     |                     |                     |
+ |         108         |     Merri Clark     |        Sugarland   |
+ |         110         |     Dick Reyes      |         New York   |
+ |         149         |     Mel Dale        |          Oshkosh   |
+ |         150         |     Nan Newman      |         Victoria   |
+ |         165         |     Joe Bell        |           Newark   |
+ |         182         |     Alice Beach     |         San Jose   |
+ |         191         |     M. K. Moore     |          Atlanta   |
+ |         194         |     Hope Allen      |       Carbondale   |
+ |         199         |     Sue Shuman      |          Chicago   |
+ |         205         |     A.D. Daniel     |         Beeville   |
+ |         222         |     May Thomas      |         Ft Worth   |
+ |         228         |     Al DeLeon       |      Brownsville   |
+ |         229         |     Art Smith       |     Mustang Mott   |
+ |         250         |     Dan Duran       |        Corsicana   |
+ |         291         |     Ann Woorley     |          Seattle   |
+ |         305         |     Bill Black      |          Jackson   |
+ |         338         |     Mac Deaver      |            Plano   |
+ |         341         |     Tom Wonder      |           Denver   |
+ |         344         |     Ted Tildon      |            Miami   |
+ |         350         |     Michael Nyu     |        Las Vegas   |
+ |         351         |     Herb Rilley     |    San Francisco   |
+ |         386         |     Sue Bush        |       Evansville   |
+ |         395         |     Nan Newman      |    Bullhead City   |
+ |         404         |     Sean New        |          Lubbock   |
+ |         481         |     Tom Herron      |           Denver   |
+ |         482         |     Irma Perez      |        Charlotte   |
+ |         492         |     Nell Morgan     |          Atlanta   |
+ |         504         |     Tammera Tool    |       South Bend   |
+ |         545         |     Mack Foyt       |          Daytona   |
+ |         607         |     Tom Russell     |   Salt Lake City   |
+ |         613         |     Dan Morales     |          Jackson   |
+ |         620         |     I.M. Blimpee    |         Beeville   |
+ |         646         |     Mat Gonzales    |         Ft Worth   |
+ |         729         |     Gayle Turner    |         San Jose   |
+ |         735         |     Ann J. Weeks    |   Corpus Christi   |
+ |         741         |     Ed White        |        Red River   |
+ |         743         |     Raul Pena       |        Cleveland   |
+ |         774         |     Don Guzmann     |    New Braunfels   |
+ |         777         |     Ann Hatter      |      Big Springs   |
+ |         809         |     Avis Hall       |           Helena   |
+ |         828         |     M. J. Barns     |        Cleveland   |
+ |         841         |     Nancy Gomez     |            Miami   |
+ |         842         |     Ed Moreno       |          Durango   |
+ |         853         |     Paul Driver     |          Chicago   |
+ |         854         |     T. N. Teal      |        Baltimore   |
+ |         878         |     Kim Mills       |           Austin   |
+ |         900         |     Roy Shaw        |         Paradise   |
+ |         929         |     Keith Aaron     |       LayFayette   |
+ |         943         |     Tom Thumb       |           Dallas   |
+ |         987         |     Ralph Dietz     |            Cuero   |
+ The number of exchanges: 602
+
+
+2. The Selection Sort
+                         the unsorted list
+ |  employee id number |    employee name    |         city        |
+ |                     |                     |                     |
+ |         735         |     Ann J. Weeks    |   Corpus Christi   |
+ |         341         |     Tom Wonder      |           Denver   |
+ |         646         |     Mat Gonzales    |         Ft Worth   |
+ |         229         |     Art Smith       |     Mustang Mott   |
+ |         842         |     Ed Moreno       |          Durango   |
+ |         620         |     I.M. Blimpee    |         Beeville   |
+ |         741         |     Ed White        |        Red River   |
+ |         222         |     May Thomas      |         Ft Worth   |
+ |         165         |     Joe Bell        |           Newark   |
+ |         182         |     Alice Beach     |         San Jose   |
+ |         943         |     Tom Thumb       |           Dallas   |
+ |         150         |     Nan Newman      |         Victoria   |
+ |         250         |     Dan Duran       |        Corsicana   |
+ |         350         |     Michael Nyu     |        Las Vegas   |
+ |         228         |     Al DeLeon       |      Brownsville   |
+ |         344         |     Ted Tildon      |            Miami   |
+ |         828         |     M. J. Barns     |        Cleveland   |
+ |         110         |     Dick Reyes      |         New York   |
+ |         987         |     Ralph Dietz     |            Cuero   |
+ |         777         |     Ann Hatter      |      Big Springs   |
+ |         191         |     M. K. Moore     |          Atlanta   |
+ |         545         |     Mack Foyt       |          Daytona   |
+ |         878         |     Kim Mills       |           Austin   |
+ |         900         |     Roy Shaw        |         Paradise   |
+ |         351         |     Herb Rilley     |    San Francisco   |
+ |         291         |     Ann Woorley     |          Seattle   |
+ |         854         |     T. N. Teal      |        Baltimore   |
+ |         404         |     Sean New        |          Lubbock   |
+ |         607         |     Tom Russell     |   Salt Lake City   |
+ |         305         |     Bill Black      |          Jackson   |
+ |         199         |     Sue Shuman      |          Chicago   |
+ |         395         |     Nan Newman      |    Bullhead City   |
+ |         809         |     Avis Hall       |           Helena   |
+ |         504         |     Tammera Tool    |       South Bend   |
+ |         841         |     Nancy Gomez     |            Miami   |
+ |         149         |     Mel Dale        |          Oshkosh   |
+ |         492         |     Nell Morgan     |          Atlanta   |
+ |         613         |     Dan Morales     |          Jackson   |
+ |         386         |     Sue Bush        |       Evansville   |
+ |         929         |     Keith Aaron     |       LayFayette   |
+ |         481         |     Tom Herron      |           Denver   |
+ |         853         |     Paul Driver     |          Chicago   |
+ |         729         |     Gayle Turner    |         San Jose   |
+ |         205         |     A.D. Daniel     |         Beeville   |
+ |         482         |     Irma Perez      |        Charlotte   |
+ |         774         |     Don Guzmann     |    New Braunfels   |
+ |         338         |     Mac Deaver      |            Plano   |
+ |         194         |     Hope Allen      |       Carbondale   |
+ |         743         |     Raul Pena       |        Cleveland   |
+ |         108         |     Merri Clark     |        Sugarland   |
+
+                 the list by using the selection sort
+ |  employee id number |    employee name    |         city        |
+ |                     |                     |                     |
+ |         108         |     Merri Clark     |        Sugarland   |
+ |         110         |     Dick Reyes      |         New York   |
+ |         149         |     Mel Dale        |          Oshkosh   |
+ |         150         |     Nan Newman      |         Victoria   |
+ |         165         |     Joe Bell        |           Newark   |
+ |         182         |     Alice Beach     |         San Jose   |
+ |         191         |     M. K. Moore     |          Atlanta   |
+ |         194         |     Hope Allen      |       Carbondale   |
+ |         199         |     Sue Shuman      |          Chicago   |
+ |         205         |     A.D. Daniel     |         Beeville   |
+ |         222         |     May Thomas      |         Ft Worth   |
+ |         228         |     Al DeLeon       |      Brownsville   |
+ |         229         |     Art Smith       |     Mustang Mott   |
+ |         250         |     Dan Duran       |        Corsicana   |
+ |         291         |     Ann Woorley     |          Seattle   |
+ |         305         |     Bill Black      |          Jackson   |
+ |         338         |     Mac Deaver      |            Plano   |
+ |         341         |     Tom Wonder      |           Denver   |
+ |         344         |     Ted Tildon      |            Miami   |
+ |         350         |     Michael Nyu     |        Las Vegas   |
+ |         351         |     Herb Rilley     |    San Francisco   |
+ |         386         |     Sue Bush        |       Evansville   |
+ |         395         |     Nan Newman      |    Bullhead City   |
+ |         404         |     Sean New        |          Lubbock   |
+ |         481         |     Tom Herron      |           Denver   |
+ |         482         |     Irma Perez      |        Charlotte   |
+ |         492         |     Nell Morgan     |          Atlanta   |
+ |         504         |     Tammera Tool    |       South Bend   |
+ |         545         |     Mack Foyt       |          Daytona   |
+ |         607         |     Tom Russell     |   Salt Lake City   |
+ |         613         |     Dan Morales     |          Jackson   |
+ |         620         |     I.M. Blimpee    |         Beeville   |
+ |         646         |     Mat Gonzales    |         Ft Worth   |
+ |         729         |     Gayle Turner    |         San Jose   |
+ |         735         |     Ann J. Weeks    |   Corpus Christi   |
+ |         741         |     Ed White        |        Red River   |
+ |         743         |     Raul Pena       |        Cleveland   |
+ |         774         |     Don Guzmann     |    New Braunfels   |
+ |         777         |     Ann Hatter      |      Big Springs   |
+ |         809         |     Avis Hall       |           Helena   |
+ |         828         |     M. J. Barns     |        Cleveland   |
+ |         841         |     Nancy Gomez     |            Miami   |
+ |         842         |     Ed Moreno       |          Durango   |
+ |         853         |     Paul Driver     |          Chicago   |
+ |         854         |     T. N. Teal      |        Baltimore   |
+ |         878         |     Kim Mills       |           Austin   |
+ |         900         |     Roy Shaw        |         Paradise   |
+ |         929         |     Keith Aaron     |       LayFayette   |
+ |         943         |     Tom Thumb       |           Dallas   |
+ |         987         |     Ralph Dietz     |            Cuero   |
+ The number of exchanges: 49
+
